@@ -1,4 +1,10 @@
 h1{
-  border-color: #d3e644;
-  border-style: dashed;
+  text-align: center;
+  text-decoration: underline;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  list-style-position: inside;
 }
