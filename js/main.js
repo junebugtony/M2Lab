@@ -1,7 +1,6 @@
-// window.sayHello = sayHello;
 /**
- * This function returns the string 'hello'
- * @return {string} the string hello
+ * This function returns an alert containing 'hello'
+ * @return {alert} hello
  */
 export function sayHello() {
     alert("Hello!");

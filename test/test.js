@@ -1,10 +1,21 @@
 import {sayHello} from '../js/main.js';
 
-QUnit.module('hello', function() {
+QUnit.module('sayHello', function() {
 
-    QUnit.test('make sure the hello function says hello', function(assert) {
-        var result = sayHello();
-        assert.equal(result, 'hello');
+    QUnit.test('hello function triggers an alert with "Hello!"', function(assert) {
+    
+        const originalAlert = window.alert;
+        let alertMessage = '';
+
+        window.alert = function(message) {
+            alertMessage = message;
+        };
+
+        sayHello();
+
+        assert.equal(alertMessage, 'Hello!', 'sayHello should trigger an alert with the message "Hello!"');
+
+        window.alert = originalAlert;
     });
 
 
